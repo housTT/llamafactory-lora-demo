@@ -1,4 +1,4 @@
-# quanta: LoRA fine-tuning on Tenstorrent with LlamaFactory, served with tt-inference-server
+# llamafactory-lora-demo: LoRA fine-tuning on Tenstorrent with LlamaFactory, served with tt-inference-server
 
 Prototype, 2026 Sep 30 / Oct 1. One repository that pins everything needed to fine-tune Llama 3.1 8B Instruct
 on a single Tenstorrent Blackhole chip, merge the adapter, serve the result, and chat with it.
@@ -12,8 +12,8 @@ on a single Tenstorrent Blackhole chip, merge the adapter, serve the result, and
 ## Clone
 
 ```bash
-git clone https://github.com/housTT/quanta.git
-cd quanta
+git clone https://github.com/housTT/llamafactory-lora-demo.git
+cd llamafactory-lora-demo
 git submodule update --init
 ```
 
