@@ -39,6 +39,29 @@ Follow `pirate-demo/README.md`. In short: train in the LlamaFactory web UI with 
 `04_evaluate.sh` to compare base and fine-tuned answers on 30 held-out prompts, then register the server in
 TT Studio and chat in Open WebUI.
 
+## What changed in LlamaFactory, and why it is small
+
+The Tenstorrent PJRT plugin from [tt-xla](https://github.com/tenstorrent/tt-xla) presents the chip to
+PyTorch/XLA the same way a TPU is presented. Hugging Face Trainer and accelerate already drive XLA devices
+(device placement, per-step graph execution, checkpoint saving), and tt-xla's compiler (tt-mlir) and runtime
+(tt-metal) do the lowering and kernel work. LlamaFactory only has to detect the device and remove the places
+where TPU assumptions break on this hardware.
+
+The fork's diff is 15 files, about 1,000 lines, most of it new rather than modified:
+
+| Where | Lines | What |
+| --- | --- | --- |
+| `src/llamafactory/extras/tt.py` (new) | 507 | Environment setup (`PJRT_DEVICE=TT`, single-chip mesh descriptor for one chip of a p300, compile options), fixed-length padding so the compiled graph keeps one shape, a device-side AdamW and a scheduler wrapper that stream scalars to the device instead of baking them into the graph, argument guards, and a callback that executes the graph after each step and reports recompiles. |
+| 7 existing files | about 100 | Hooks: device helpers in `extras/misc.py`, setup and validation in `hparams/parser.py`, optimizer and scheduler selection in the SFT trainer, collator padding in the SFT workflow, callback registration, `env` report. |
+| `tests/extras/test_tt.py` (new) | 116 | Unit tests that run without hardware. |
+| `examples/tenstorrent/` (new) | 271 | Verified config, launchers for CLI and web UI, LlamaBoard form, README. |
+
+Each piece in `tt.py` fixes a behavior that differs from the TPU path and surfaced as an opaque
+`Error code: 13`: a new tensor shape or a changed Python scalar triggers a minutes-long recompilation of the
+8B graph, and torch's capturable AdamW yields NaN weights on a zero-learning-rate warmup step.
+Everything else, including training the model on one chip and serving the merged result, is stock tt-xla,
+Hugging Face and tt-inference-server.
+
 ## What was verified
 
 - Llama 3.1 8B Instruct LoRA SFT on one p300 chip (32 GB): per-device batch 2 at 128 tokens, or batch 1 at
