@@ -1,0 +1,152 @@
+[
+  {
+    "instruction": "Implement a sorting algorithm that orders numbers from least to greatest.",
+    "input": "[5, 1, 9, 6]",
+    "output": "To sort the given list of numbers from least to greatest, one of the approaches we can use is the Bubble sort algorithm. Here is the implementation:\n\n```python\narr = [5, 1, 9, 6] #input list\n\nn = len(arr) #length of list\n\n#Go through all elements\nfor i in range(n):\n    for j in range(0, n - i - 1):\n\n        # Swap if the element is found greater than the next element\n        if arr[j] > arr[j + 1]:\n            arr[j], arr[j + 1] = arr[j + 1], arr[j]\n\nprint(\"Sorted List: \", arr)\n\n#Output: Sorted List:  [1, 5, 6, 9]\n```\n\nIn the above code, we used a nested loop to iterate through the list, comparing each element with its neighbor. If the element is greater than its neighbor, we'll swap them. This will continue until the entire list is sorted."
+  },
+  {
+    "instruction": "Summarize what you think is the importance of data science.",
+    "input": "",
+    "output": "Data science is an interdisciplinary field that uses scientific methods, algorithms, and knowledge extracted from structured and unstructured data to derive insights and knowledge. The importance of data science lies in its ability to help businesses and organizations make informed decisions, improve their operations, and stay competitive. By using powerful tools and techniques such as machine learning, predictive modeling, and data mining, data science can analyze large volumes of data to discover hidden patterns, correlations, and trends. This information can be used to identify opportunities, reduce costs, drive innovation, and improve customer experiences. Additionally, data science can help to solve complex problems in various fields, such as healthcare, finance, and the environment, making it an essential tool in today's data-driven world."
+  },
+  {
+    "instruction": "Create a rewriting of the sentence using the same meaning.",
+    "input": "She was excited to finally arrive at the destination.",
+    "output": "She was thrilled to reach the destination at last."
+  },
+  {
+    "instruction": "Given a short story, adapt it in the form of a poem.",
+    "input": "It was a cold winter day. She was walking outside in the snow, thinking about how life could be different.",
+    "output": "In the quiet winter chill,\nA girl walks alone,\nSnow crunching as she goes,\nLost in thoughts unknown.\n\nPondering the paths of life,\nWishing for a change,\nThis cold winter day,\nHer thoughts, they range.\n\nHow could things be different,\nShe wonders in her mind,\nAs snowflakes swirl around,\nAnswers she hopes to find.\n\nIn the stillness of the snow,\nShe finds peace and still,\nAnd though her thoughts still wander,\nShe feels hope and thrill.\n\nFor life is ever-changing,\nEach step a chance to grow,\nA journey to discover,\nAs she walks through the snow."
+  },
+  {
+    "instruction": "Construct a query to retrieve data from a database.",
+    "input": "",
+    "output": "SELECT column1, column2, column3 FROM table_name WHERE condition;\n\nNote: \"column1, column2, column3\" should be replaced with the names of the columns you want to retrieve data from, \"table_name\" should be replaced with the name of the table, and \"condition\" should be replaced with the specific condition(s) that must be met in order to retrieve the data."
+  },
+  {
+    "instruction": "Create a math problem for children ages 7-9.",
+    "input": "",
+    "output": "John had 12 apples. His friend Mike gave him 8 more apples. How many apples does John have now?"
+  },
+  {
+    "instruction": "Name three vaccinations that adults should get",
+    "input": "",
+    "output": "1. Influenza vaccine: It's recommended that adults receive an annual flu vaccine to protect against the seasonal influenza virus.\n\n2. Tetanus, diphtheria, and pertussis (Tdap) vaccine: It's recommended that adults receive a booster shot of the Tdap vaccine every 10 years to protect against tetanus, diphtheria, and pertussis (whooping cough).\n\n3. Pneumococcal vaccine: This vaccine is recommended for adults 65 years of age and older and for those with certain underlying medical conditions to protect against pneumococcal disease, which can cause pneumonia and other serious illnesses."
+  },
+  {
+    "instruction": "Append your name to the beginning of each string in the list.",
+    "input": "[\"Hello World!\", \"Good Morning!\", \"Good Evening!\"]",
+    "output": "[\"AI assistant: Hello World!\", \"AI assistant: Good Morning!\", \"AI assistant: Good Evening!\"]"
+  },
+  {
+    "instruction": "Categorize a product as either a necessity or a luxury item.",
+    "input": "iPhone 12 Pro Max",
+    "output": "iPhone 12 Pro Max is a luxury item."
+  },
+  {
+    "instruction": "Write a Haiku of 3 lines, with the first containing 5 syllables and the remaining lines containing 7 syllables.",
+    "input": "",
+    "output": "Whispers in the wind,\nEchoes of the past softly sigh,\nNature's symphony."
+  },
+  {
+    "instruction": "Given a URL, explain what is the content of the webpage in one sentence.",
+    "input": "https://www.bbc.com/news/uk-politics-51010449",
+    "output": "The website contains news about the UK politics, specifically, Boris Johnson's welcoming a Brexit deal following the approval of his plan by MPs."
+  },
+  {
+    "instruction": "Give an example of a compound sentence that uses subordination as a method of combining sentences.",
+    "input": "",
+    "output": "Although I had a lot of work to do, I decided to take a break and go for a walk in the park."
+  },
+  {
+    "instruction": "Create a table of the top 10 countries with the highest population density.",
+    "input": "",
+    "output": "Below is a table of the top 10 countries with the highest population density according to the World Population Review (2021 data):\n\n| Rank | Country | Population Density (People/km²)|\n|---|---|---|\n|1|Monaco |26,150|\n|2| Singapore| 8,358|\n|3| Bahrain| 2,239|\n|4| Vatican City |2,003|\n|5| Malta| 1,379|\n|6| Maldives| 1,331|\n|7| Bangladesh| 1,265|\n|8| Bermuda| 1,246|\n|9| Lebanon| 667|\n|10|  Barbados| 668|"
+  },
+  {
+    "instruction": "Explain the concept of blockchain to a 5 year old.",
+    "input": "",
+    "output": "Ok, imagine that you have a Lego box where you store all your Lego pieces, and every time you play with your friends, you build something new with those pieces. But how do you make sure that everyone is playing fair and nobody is taking more pieces or taking away what you built? \n\nWell, imagine now that every time you and your friends build something new, you take a picture and write down everything that was done on a piece of paper. Then, everyone gets a copy of that paper, so everyone knows exactly how many pieces were used, what you built, and who played with them. \n\nBlockchain is like that piece of paper, it keeps track of everything that happens in a computer and nobody can change what is written on it because everyone has a copy. It's like a special diary that keeps everything safe and fair for everyone! Cool, huh?"
+  },
+  {
+    "instruction": "Expand the abbreviated word given in the sentence. Output the modified sentence directly.",
+    "input": "My teacher is a PhD in Lit.",
+    "output": "My teacher is a Doctor of Philosophy in Literature."
+  },
+  {
+    "instruction": "Organize the sentences chronologically.",
+    "input": "His family moved to the United States when he was four. He graduated from high school and went on to college. After college, he got his first job as an engineer.",
+    "output": "His family moved to the United States when he was four. He graduated from high school and went on to college. After college, he got his first job as an engineer."
+  },
+  {
+    "instruction": "Rewrite this sentence so that it reads in the passive voice.",
+    "input": "He installed the software.",
+    "output": "The software was installed by him."
+  },
+  {
+    "instruction": "Take the given quote and create a last sentence for it.",
+    "input": "\"The best way to predict the future is to create it\"",
+    "output": "\"So, shape your destiny with actions taken today.\""
+  },
+  {
+    "instruction": "Estimate the temperature of given substance.",
+    "input": "Substance: Water",
+    "output": "I'm sorry, but I cannot estimate the temperature of water without additional information. Could you provide more details, such as the location or environment of the water or any other relevant information?"
+  },
+  {
+    "instruction": "What is the name of the fifth planet from the Sun?",
+    "input": "",
+    "output": "The fifth planet from the Sun is Jupiter."
+  },
+  {
+    "instruction": "Rewrite the following paragraph in third-person point of view.",
+    "input": "I am a passionate programmer and I have been coding for more than 10 years.",
+    "output": "They are a passionate programmer and have been coding for more than 10 years."
+  },
+  {
+    "instruction": "What is the most popular cryptocurrency?",
+    "input": "",
+    "output": "The most popular cryptocurrency is Bitcoin. Introduced in 2009, it is the first and most widely used decentralized cryptocurrency. Its popularity is due to its pioneering nature, widespread adoption, and the significant infrastructure that has been built around it."
+  },
+  {
+    "instruction": "Add the following fractions: 3/4 + 2/3",
+    "input": "",
+    "output": "To add two fractions, they must have a common denominator. Let us convert these two fractions to equivalent fractions with the same denominator. The smallest common denominator for 3/4 and 2/3 is 12. \n\nTo convert 3/4 to a fraction with 12 as its denominator, you need to multiply both its numerator (top number) and denominator (bottom number) by the same value: 3\n\n(3/4) * (3/3) = 9/12\n\nTo convert 2/3 to a fraction with 12 as its denominator, you need to multiply both its numerator (top number) and denominator (bottom number) by the same value: 4\n\n(2/3) * (4/4) = 8/12\n\nNow that we have equivalent fractions, we can proceed with the addition:\n\n3/4 + 2/3 = 9/12 + 8/12 = (9 + 8) / 12 = 17/12\n\nIn conclusion, 3/4 + 2/3 = 17/12."
+  },
+  {
+    "instruction": "Calculate the answer to the following expression: (2x + 3y) - (3x + 3y).",
+    "input": "",
+    "output": "The answer to the expression (2x + 3y) - (3x + 3y) is calculated as follows: \n1. Distribute the negative sign on the second term to make it -3x - 3y\n2. Combine like terms: \n- 2x and -3x combine to make - x\n- 3y and -3y combine to make 0\n3. So, the final answer is -x."
+  },
+  {
+    "instruction": "Identify three countries in South America",
+    "input": "",
+    "output": "1. Brazil\n2. Argentina\n3. Chile"
+  },
+  {
+    "instruction": "List the 12 planets of the Solar System",
+    "input": "",
+    "output": "There aren't 12 planets in the solar system according to the current accepted classification by the International Astronomical Union (IAU). According to IAU, there are 8 planets in the solar system, and they include: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune. The planet Pluto was redefined as a \"Dwarf Planet\" in 2006. Apart from Pluto, there are a few more dwarf planets in the solar system like Ceres, Eris, Haumea, and Makemake."
+  },
+  {
+    "instruction": "Edit this sentence and make sure it is grammatically correct.",
+    "input": "I went to the shopping mall, and made sure buy some presents.",
+    "output": "I went to the shopping mall and made sure to buy some presents."
+  },
+  {
+    "instruction": "Write ten questions on the topic of Internet security.",
+    "input": "",
+    "output": "1. What are the common internet security threats to personal accounts and how can they be prevented?\n2. How do Virtual Private Networks (VPNs) help improve internet security and privacy?\n3. What are the best practices for creating strong and secure passwords?\n4. Can downloading free software from the internet compromise your computer's security?\n5. What is two-factor authentication and why is it important for internet security?\n6. What are the risks associated with public Wi-Fi networks and how can they be mitigated?\n7. How can you protect yourself from phishing scams and identity theft on the internet?\n8. What are the most important things to consider when choosing an antivirus software?\n9. How can parents ensure the internet security of their children while they browse online?\n10. How do updates to operating systems and software help improve internet security?"
+  },
+  {
+    "instruction": "Compose a comment for a review.",
+    "input": "The reviewer says that the product arrived quickly but the color was wrong.",
+    "output": "Thank you for taking the time to leave a review. We're glad to hear that the delivery of your product was prompt. However, we're sorry to learn that the color wasn't what you expected. Could you please get in touch with our customer service team so we can assist you in resolving this issue? Thank you."
+  },
+  {
+    "instruction": "Given the following passage, summarize it",
+    "input": "John Adams was an American patriot who served as the second president of the United States. He was a statesman, a diplomat, and a leader of the American Revolution. He was very influential in the drafting and ratification of the United States Constitution. He was also a strong leader of the Federalist Party and an advocate of the Bill of Rights.",
+    "output": "John Adams was the second president of the United States, and played a key role as a statesman, diplomat, and leader in the American Revolution. He helped draft and ratify the Constitution, and was a leader of the Federalist Party, advocating for the Bill of Rights."
+  }
+]

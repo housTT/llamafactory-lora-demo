@@ -1,0 +1,4 @@
+pirate-demo/saves/
+*.log
+__pycache__/
+.venv/
