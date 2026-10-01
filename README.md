@@ -12,11 +12,14 @@ on a single Tenstorrent Blackhole chip, merge the adapter, serve the result, and
 ## Clone
 
 ```bash
-git clone --recursive git@github.com:housTT/quanta.git
+git clone https://github.com/housTT/quanta.git
 cd quanta
+git submodule update --init
 ```
 
-If you cloned without `--recursive`: `git submodule update --init`.
+Do not use `--recursive`: tt-inference-server has two nested submodules (`tt-llm-engine`, `Mooncake`) that the
+demo does not need. They add about 580 MB, and Mooncake is pinned with an SSH URL, so a recursive clone fails
+without GitHub SSH keys. `git submodule update --init` without `--recursive` leaves them out.
 
 ## Setup
 
